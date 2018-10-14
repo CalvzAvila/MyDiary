@@ -40,7 +40,7 @@
     <EditText
         android:id="@+id/etNotes"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="374dp"
         android:layout_marginTop="60dp"
         android:ems="10"
         android:gravity="top"

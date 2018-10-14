@@ -6,14 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="55dp"
-            android:paddingTop="20dp">
 
-        </android.support.v7.widget.RecyclerView>
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
