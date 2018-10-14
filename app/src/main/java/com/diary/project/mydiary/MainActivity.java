@@ -54,18 +54,17 @@ public class MainActivity extends AppCompatActivity
         diaryArrayList.add(new DiaryListModel("Hello","naniii?"));
         diaryArrayList.add(new DiaryListModel("Hello","naniii?"));
         diaryArrayList.add(new DiaryListModel("Hello","naniii?"));
-        diaryArrayList.add(new DiaryListModel("Hello","naniii?"));
+        diaryArrayList.add(new DiaryListModel("Hello","naniii?asdasdasd" +
+                "asdasdasdas" +
+                "dasdasdasdasdasdas" +
+                "dasda" +
+                "sdasdasdasdasdasdasd"));
         recyclerView = findViewById(R.id.recyclerView);
 
         diaryListAdapter = new DiaryListAdapter(diaryArrayList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(MainActivity.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(diaryListAdapter);
-
-
-
-
-
 
 //        listModels = new ArrayList<>();
 //        diaryListAdapter = new DiaryListAdapter(listModels,getApplicationContext());
@@ -84,7 +83,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-
         DrawerLayout drawer =  findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -102,44 +100,22 @@ public class MainActivity extends AppCompatActivity
 
         }
 
-
-
-
-
-
-
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) return true;
-//        return super.onOptionsItemSelected(item);
-//    }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_logout) {
+         if (id == R.id.nav_logout) {
 
             startActivity(new Intent(MainActivity.this, Login.class));
+            finish();
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
